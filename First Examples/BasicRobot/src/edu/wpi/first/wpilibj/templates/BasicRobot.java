@@ -68,11 +68,40 @@ public class BasicRobot extends SimpleRobot {
     }
 
     /**
-     * 
+     * Now that autonomous mode is over, it's time to start driving!
+     * In Operator Control, we'll place all the code we need during
+     * the rest of the round. 
      */
-    public void operatorControl() {
+    public void operatorControl() {        
         while(this.isEnabled() && this.isOperatorControl()) {
+            /*
+             * "while" is a type of "loop"
+             * so for now the above says:
+             * "while the round is enabled and we're in operator control mode
+             * lets keep running the code inside this block in a loop"
+             */
+            
+            /* the first and most important part of a robot in operator
+             * mode is to drive!
+             * So the next line tells the drive train the current
+             * positions of the left and right joystick.
+             * So the next line says "Hey robotDrive, please drive
+             * in the style of tankDrive (4-wheel drive), using the
+             * current positions of the left and right joystick"
+             */
             robotDrive.tankDrive(leftJoystick, rightJoystick);
+            
+            /*
+             * So this while loop says...
+             * "If the round is enabled and it we are in operator control
+             * lets tell the robot to drive...
+             * and if the round is enabled and if we are in operator control
+             * lets tell the robot to drive...
+             * and IF THE round is enabled and if we are in operator control
+             * lets tell the robot to drive...
+             * and so on and so forth, until the round is over! then
+             * the loop is over and we're done!
+             */
         }
 
     }
