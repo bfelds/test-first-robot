@@ -58,12 +58,17 @@ public class BasicRobot extends SimpleRobot {
     
     /**
      * Autonomous mode! Finally something that we've heard before!
+     * 
      */
     public void autonomous() {
+        /*
+         * Once the referees start the match, the code inside of these curly
+         * braces will run. 
+         */
     }
 
     /**
-     * This function is called once each time the robot enters operator control.
+     * 
      */
     public void operatorControl() {
         while(this.isEnabled() && this.isOperatorControl()) {
